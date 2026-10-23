@@ -66,7 +66,7 @@ git status
 
 ### Step 14: Commit changes
 git add .
-git commit -m "Complete Assignment 12: clean App.tsx, update tests, add full README, and configure Docker"
+git commit -m "Complete Coding Assignment 12 "
 
 ### Step 15: Branch
 git branch -M main
