@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+# Sandhu Anantvir - UI Garden Component Library
+**Student Name:** Anantvir Kaur Sandhu  
+**Project Name:** `sandhu_anantvir_library`  
+**Container Name:** `Sandhu_Anantvir_coding_assignment12`  
+**Working Directory:** `/Sandhu_Anantvir_ui_garden`  
+**Port:** `8083`  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
+## Overview
+This project is a React and TypeScript UI component library and UI Garden built as part of Assignment 12. It features custom UI components documented using Storybook, styled using `styled-components`, thoroughly tested with Jest unit tests, and fully containerized using Docker.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+### Step 1: Project Setup
+npx create-react-app sandhu_anantvir_library --template typescript
 
-### `npm start`
+navigate into project folder
+cd sandhu_anantvir_library
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Step 2: Install Styled Components and testing/storybook dependencies
+npm install styled-components
+npm install --save-dev @types/styled-components jest-styled-components @testing-library/react @testing-library/jest-dom
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Step 3: Initialize Storybook
+npx storybook@latest init
 
-### `npm test`
+### Step 4 : Created 9 Components in src/components
+1.Button
+2.Card
+3.Img
+4.Dropdown
+5.HeroImage
+6.RadioButton
+7.Label
+8.Text
+9.Table
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Step 5: Created files for each component
+1.stories.tsx
+2.types.tsx
+3.test.tsx
+4.tsx
+5.index.ts
 
-### `npm run build`
+### Step 6: Created index.ts in src
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Step 7: npm run storybook
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Step 8: Created dockerfile
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Step 9: Created dockerignore
 
-### `npm run eject`
+### Step 10: Build docker image
+docker build -t sandhu_anantvir_library .
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Step 11: Run the container named sandhu_anantvir_coding_assignment12 mapped to port 8083
+docker run -d -p 8083:8083 --name sandhu_anantvir_coding_assignment12 sandhu_anantvir_coding_assignment12
+http://localhost:8083.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Step 12: Initialize Git
+git init
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Step 13: Git Status
+git status
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Step 14: Commit changes
+git add .
+git commit -m "Complete Assignment 12: clean App.tsx, update tests, add full README, and configure Docker"
 
-## Learn More
+### Step 15: Branch
+git branch -M main
+git remote add origin https://github.com/asandhu-33/sandhu_anantvir_ui_garden.git
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Step 16: Push origin
+git push -u origin main
