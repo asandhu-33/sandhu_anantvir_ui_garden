@@ -45,6 +45,7 @@ npx storybook@latest init
 ### Step 6: Created index.ts in src
 
 ### Step 7: npm run storybook
+http://localhost:6006
 
 ### Step 8: Created dockerfile
 
