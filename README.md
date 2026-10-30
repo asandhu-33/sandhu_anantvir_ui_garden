@@ -74,3 +74,7 @@ git remote add origin https://github.com/asandhu-33/sandhu_anantvir_ui_garden.gi
 
 ### Step 16: Push origin
 git push -u origin main
+
+
+docker rm -f Sandhu_Anantvir_coding_assignment12
+docker run --name Sandhu_Anantvir_coding_assignment12 -p 8083:8083 sandhu_anantvir_library
