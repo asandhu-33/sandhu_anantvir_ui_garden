@@ -4,7 +4,6 @@ COPY package*.json ./
 RUN npm install
 COPY . .
 
-# Disable ESLint during production build to avoid plugin compatibility errors
 ENV DISABLE_ESLINT_PLUGIN=true
 RUN npm run build
 
