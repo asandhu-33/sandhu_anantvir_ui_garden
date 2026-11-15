@@ -1,16 +1,19 @@
-import React from 'react';
-import styled from 'styled-components';
-import { DropdownProps } from './Dropdown.types';
+import React from "react";
+import styled from "styled-components";
+import { DropdownProps } from "./Dropdown.types";
 
-const StyledSelect = styled.select<{ $disabled?: boolean; backgroundColor?: string }>`
+const StyledSelect = styled.select<{
+  $disabled?: boolean;
+  backgroundColor?: string;
+}>`
   padding: 8px 12px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: ${(props) =>
-    props.$disabled ? '#f0f0f0' : props.backgroundColor || '#ffffff'};
-  color: ${(props) => (props.$disabled ? '#888888' : '#333333')};
-  cursor: ${(props) => (props.$disabled ? 'not-allowed' : 'pointer')};
+    props.$disabled ? "#f0f0f0" : props.backgroundColor || "#ffffff"};
+  color: ${(props) => (props.$disabled ? "#888888" : "#333333")};
+  cursor: ${(props) => (props.$disabled ? "not-allowed" : "pointer")};
   opacity: ${(props) => (props.$disabled ? 0.6 : 1)};
   transition: all 0.3s ease;
 
@@ -26,20 +29,21 @@ const StyledSelect = styled.select<{ $disabled?: boolean; backgroundColor?: stri
 
 export const Dropdown: React.FC<DropdownProps> = ({
   options,
-  placeholder = 'Select an option',
+  placeholder = "Select an option",
   disabled = false,
   backgroundColor,
   onChange,
 }) => {
   return (
     <StyledSelect
+      defaultValue=""
       $disabled={disabled}
       backgroundColor={backgroundColor}
       disabled={disabled}
       onChange={(e) => onChange && onChange(e.target.value)}
       data-testid="dropdown-element"
     >
-      <option value="" disabled selected>
+      <option value="" disabled>
         {placeholder}
       </option>
       {options.map((opt, index) => (
